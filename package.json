@@ -1,0 +1,60 @@
+{
+  "name": "r-bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "clean" : "rm -r ./dist",
+    "start": "node ./dist/index.js",
+    "pm2": "pm2 restart ecosystem.config.js",
+    "test": "jest",
+    "test2": "nodemon --watch './**/*.ts' --exec 'ts-node' ",
+    "dev": "nodemon --watch './**/*.ts' --exec 'ts-node' index.ts",
+    "dev1": "nodemon --watch './**/*.ts' --exec 'ts-node' -r tsconfig-paths/register "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rizqyn9/R-Bot.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rizqyn9/R-Bot/issues"
+  },
+  "homepage": "https://github.com/rizqyn9/R-Bot#readme",
+  "dependencies": {
+    "@open-wa/wa-automate": "^4.20.4",
+    "@open-wa/wa-decrypt": "^4.2.1",
+    "@types/figlet": "^1.5.4",
+    "@types/fs-extra": "^9.0.12",
+    "@types/ioredis": "^4.27.1",
+    "@types/redis": "^2.8.31",
+    "chalk": "^4.1.2",
+    "chokidar": "^3.5.2",
+    "death": "^1.1.0",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "figlet": "^1.5.2",
+    "fs-extra": "^10.0.0",
+    "ioredis": "^4.27.8",
+    "mime-types": "^2.1.32",
+    "module-alias": "^2.2.2",
+    "mongoose": "^6.0.1",
+    "tsconfig-paths": "^3.11.0",
+    "util": "^0.12.4"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.15.5",
+    "@babel/preset-env": "^7.15.6",
+    "@babel/preset-typescript": "^7.15.0",
+    "@types/jest": "^27.0.2",
+    "babel-jest": "^27.2.4",
+    "babel-plugin-module-resolver": "^4.1.0",
+    "jest": "^27.2.4",
+    "prettier": "^2.4.1",
+    "ts-jest": "^27.0.5",
+    "ts-node": "^10.2.1"
+  }
+}
